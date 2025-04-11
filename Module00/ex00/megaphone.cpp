@@ -15,7 +15,6 @@
 
 int main(int argc, char **argv)
 {
-    (void)argv; // Unused variable
     if(argc == 1)
     {
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
