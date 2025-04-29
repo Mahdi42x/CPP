@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mawada <mawada@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 14:31:39 by mawada            #+#    #+#             */
-/*   Updated: 2025/04/23 12:21:37 by mawada           ###   ########.fr       */
+/*   Created: 2025/04/24 13:07:59 by mawada            #+#    #+#             */
+/*   Updated: 2025/04/24 14:11:08 by mawada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-void randomChump(std::string name) {
-    Zombie z(name);     // Auf dem Stack
-    z.announce();       // Gibt seinen Spruch aus
-} // Zerstörung erfolgt automatisch hier
+int main() {
+    Harl harl;
 
-// randomChump.cpp
-// Implementiert die Funktion `randomChump()`.
-// Erstellt einen Zombie auf dem Stack und ruft sofort `announce()` auf.
-// Der Zombie wird automatisch gelöscht, wenn die Funktion endet.
+    harl.complain("DEBUG");
+    harl.complain("INFO");
+    harl.complain("WARNING");
+    harl.complain("ERROR");
+    harl.complain("OTHER"); // Test für ungültiges Level
+
+    return 0;
+}

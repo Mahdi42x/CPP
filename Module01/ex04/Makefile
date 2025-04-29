@@ -6,11 +6,11 @@
 #    By: mawada <mawada@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/09 16:38:56 by mawada            #+#    #+#              #
-#    Updated: 2025/04/23 12:26:22 by mawada           ###   ########.fr        #
+#    Updated: 2025/04/24 12:47:26 by mawada           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombieHorde
+NAME = replace
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mawada <mawada@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 14:31:39 by mawada            #+#    #+#             */
-/*   Updated: 2025/04/23 12:21:37 by mawada           ###   ########.fr       */
+/*   Created: 2025/04/23 18:40:45 by mawada            #+#    #+#             */
+/*   Updated: 2025/04/23 18:43:58 by mawada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-void randomChump(std::string name) {
-    Zombie z(name);     // Auf dem Stack
-    z.announce();       // Gibt seinen Spruch aus
-} // Zerstörung erfolgt automatisch hier
+#include <string>
 
-// randomChump.cpp
-// Implementiert die Funktion `randomChump()`.
-// Erstellt einen Zombie auf dem Stack und ruft sofort `announce()` auf.
-// Der Zombie wird automatisch gelöscht, wenn die Funktion endet.
+class Weapon {
+private:
+    std::string type;  // Waffentyp (z. B. "Sword", "Axe", etc.)
+
+public:
+    Weapon(const std::string& type);  // Konstruktor zum Setzen des Waffentyps
+    const std::string& getType() const;  // Gibt den Waffentyp zurück
+    void setType(const std::string& newType);  // Setzt den Waffentyp
+};
+
+#endif
